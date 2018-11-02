@@ -1,19 +1,24 @@
-# Welcome!
-
-This C++ template lets you get started quickly with a simple one-page playground.
+# 
 
 ```C++ runnable
-#include <iostream>
-
-using namespace std;
-
-int main() 
+class Person {
+    public:
+        Person(const char* stName)
+        {}
+        const char* GetName() const
+        {}
+        // this is needed for cout << person
+        operator const char*() const { return "John";}
+    private:
+        char* m_stName;
+};
+int main()
 {
-    cout << "Hello, World!";
+    Person person("John");
+    cout << person << endl;
+    
+    foo();
     return 0;
 }
 ```
 
-# Advanced usage
-
-If you want a more complex example (external libraries, viewers...), use the [Advanced C++ template](https://tech.io/select-repo/598)
